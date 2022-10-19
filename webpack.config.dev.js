@@ -13,7 +13,15 @@ module.exports = {
   mode: "development",
   resolve: {
     extensions: [".js", ".jsx"],
-    alias: {},
+    alias: {
+      "@components": path.resolve(__dirname, "src/components"),
+      "@containers": path.resolve(__dirname, "src/containers"),
+      "@context": path.resolve(__dirname, "src/context"),
+      "@hooks": path.resolve(__dirname, "src/hooks"),
+      "@images": path.resolve(__dirname, "src/assets/images"),
+      "@icons": path.resolve(__dirname, "src/assets/icons"),
+      "@styles": path.resolve(__dirname, "src/styles"),
+    },
   },
   module: {
     rules: [
@@ -49,7 +57,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-    })
+    }),
   ],
   devServer: {
     static: {

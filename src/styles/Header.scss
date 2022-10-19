@@ -1,0 +1,45 @@
+.header__container {
+    display: flex;
+    width: 100vw;
+    height: 8.0rem; 
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+    padding: 0 8.0rem;
+    box-shadow: 0 0 1.8rem -1.3rem var(--shadow);
+};
+
+.header__container {
+    a {
+        font-size: 1.2rem; 
+        font-weight: 800;       
+    }
+
+    a,button {
+        all: unset;
+        cursor: pointer;
+    }
+}
+
+.header__button {
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    div {
+        p {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header__container {
+        height: 16.0rem;
+        padding: 0 3.0rem;
+    }
+}
