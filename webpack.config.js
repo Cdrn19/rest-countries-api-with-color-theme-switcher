@@ -22,7 +22,7 @@ module.exports = {
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@images": path.resolve(__dirname, "src/assets/images"),
       "@icons": path.resolve(__dirname, "src/assets/icons"),
-      "@styles": path.resolve(__dirname, "src/styles")
+      "@styles": path.resolve(__dirname, "src/styles"),
     },
   },
   module: {
@@ -63,6 +63,6 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
-    minimize: [new CssMinimizerPlugin(), new TerserPlugin()],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
 };
