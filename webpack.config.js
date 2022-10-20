@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -22,7 +23,7 @@ module.exports = {
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@images": path.resolve(__dirname, "src/assets/images"),
       "@icons": path.resolve(__dirname, "src/assets/icons"),
-      "@styles": path.resolve(__dirname, "src/styles")
+      "@styles": path.resolve(__dirname, "src/styles"),
     },
   },
   module: {
@@ -61,8 +62,20 @@ module.exports = {
       filename: "[name].css",
     }),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": {
+        API: JSON.stringify(process.env.API),
+        VERSION: JSON.stringify(process.env.VERSION),
+      },
+    }),
   ],
   optimization: {
-    minimize: [new CssMinimizerPlugin(), new TerserPlugin()],
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin({
+        terserOptions: { sourceMap: true },
+      }),
+    ],
   },
 };

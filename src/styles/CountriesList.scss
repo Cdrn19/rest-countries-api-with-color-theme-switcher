@@ -1,0 +1,15 @@
+.countries__container {
+    padding: 0 4.0rem 4.0rem;
+}
+
+.contries__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+    .contries__list {
+        justify-content: center;
+    }
+}
