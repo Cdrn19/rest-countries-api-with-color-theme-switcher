@@ -23,6 +23,7 @@ module.exports = {
       "@context": path.resolve(__dirname, "src/context"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@pages": path.resolve(__dirname, "src/pages"),
+      "@routes": path.resolve(__dirname, "src/routes"),
       "@images": path.resolve(__dirname, "src/assets/images"),
       "@icons": path.resolve(__dirname, "src/assets/icons"),
       "@styles": path.resolve(__dirname, "src/styles"),
