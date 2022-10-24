@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import searchIcon from "@icons/search.svg";
 import downIcon from "@icons/chevron-back-outline.svg";
 import RegionCountries from "@components/RegionCountries";
+import CountriesList from "@containers/CountriesList";
 import "@styles/Search.scss";
 
 const search = ({ countriesList }) => {
@@ -84,6 +85,7 @@ const search = ({ countriesList }) => {
           )}
         </section>
       </div>
+      <CountriesList countriesList={countriesList} />
     </>
   );
 };
