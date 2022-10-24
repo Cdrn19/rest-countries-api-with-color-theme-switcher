@@ -1,13 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import searchIcon from "@icons/search.svg";
 import downIcon from "@icons/chevron-back-outline.svg";
+import RegionCountries from "@components/RegionCountries";
 import "@styles/Search.scss";
 
-const search = () => {
+const search = ({ countriesList }) => {
   const [q, setQ] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [regions, setRegions] = useState([]);
+  const [region, setRegion] = useState([]);
 
   const handleToggle = () => {
+    setToggle(!toggle);
+    !toggle && setRegion([]);
+  };
+
+  useEffect(() => {
+    const getRegions = () => {
+      const regions = [];
+
+      const regionList = countriesList.map((country) => {
+        return country.region;
+      });
+
+      for (let i = 0; i < regionList.length; i++) {
+        if (!regions.includes(regionList[i])) {
+          regions.push(regionList[i]);
+        }
+      }
+      setRegions(regions);
+    };
+    !!countriesList.length && getRegions();
+  }, [countriesList]);
+
+  const selectRegion = (region) => {
+    setRegion(region);
     setToggle(!toggle);
   };
 
@@ -26,6 +53,7 @@ const search = () => {
               type="text"
               placeholder="Search&nbsp;for&nbsp;a&nbsp;country..."
               onChange={(e) => setQ(e.target.value)}
+              value={q}
             />
           </div>
         </section>
@@ -34,7 +62,11 @@ const search = () => {
             className={toggle ? "filter__button animation" : "filter__button"}
           >
             <button onClick={handleToggle}>
-              <p>Filter&nbsp;by&nbsp;Region</p>
+              {!region.length ? (
+                <p>Filter&nbsp;by&nbsp;Region</p>
+              ) : (
+                <p>{region}</p>
+              )}
               <object
                 data={downIcon}
                 type="image/svg+xml"
@@ -42,6 +74,14 @@ const search = () => {
               ></object>
             </button>
           </div>
+          {toggle && (
+            <RegionCountries
+              search={regions}
+              select={(region) => {
+                selectRegion(region);
+              }}
+            />
+          )}
         </section>
       </div>
     </>

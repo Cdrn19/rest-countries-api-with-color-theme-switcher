@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <Search />
+      <Search countriesList={response} />
       <CountriesList countriesList={response} />
     </>
   );

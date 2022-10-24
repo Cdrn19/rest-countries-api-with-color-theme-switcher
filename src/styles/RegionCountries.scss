@@ -1,0 +1,34 @@
+.filter {
+    position: absolute;
+    z-index: 1;
+    top: 19.0rem;
+    right: 8.0rem;
+  
+}
+
+.filter__list {
+    ul {
+        li {
+            list-style: none;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        li:nth-child(n + 2) {
+            margin-top: 1.1rem;
+        }
+    }
+}
+
+.filter__list--button {
+    all: unset;
+    color: var(--text);
+    cursor: pointer;
+}
+
+@media (max-width: 750px) {
+    .filter {
+        top: 31.8rem;
+        left: 3.0rem;
+    }
+}
