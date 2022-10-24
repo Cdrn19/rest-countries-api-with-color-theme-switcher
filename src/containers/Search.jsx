@@ -3,6 +3,7 @@ import searchIcon from "@icons/search.svg";
 import downIcon from "@icons/chevron-back-outline.svg";
 import RegionCountries from "@components/RegionCountries";
 import CountriesList from "@containers/CountriesList";
+import useGetSearch from "@hooks/useGetSearch";
 import "@styles/Search.scss";
 
 const search = ({ countriesList }) => {
@@ -85,7 +86,7 @@ const search = ({ countriesList }) => {
           )}
         </section>
       </div>
-      <CountriesList countriesList={countriesList} />
+      <CountriesList countriesList={useGetSearch([q, region], countriesList)} />
     </>
   );
 };
