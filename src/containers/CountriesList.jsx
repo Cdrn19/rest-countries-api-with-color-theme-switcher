@@ -7,7 +7,7 @@ const countriesList = ({ countriesList }) => {
     <section className="countries__container">
       <div className="contries__list">
         {countriesList?.map((country, i) => (
-          <Link key={i} to={"/country/" + country.name.toLowerCase()}>
+          <Link key={i} to={"/country/" + encodeURIComponent(country.name)}>
             <CountryCard country={country} />
           </Link>
         ))}

@@ -92,7 +92,10 @@ const countrySelect = () => {
                 <button>Not Borders</button>
               ) : (
                 Borders?.map((border, i) => (
-                  <Link key={i} to={"/Country/" + border.name.toLowerCase()}>
+                  <Link
+                    key={i}
+                    to={"/Country/" + encodeURIComponent(border.name)}
+                  >
                     <button>
                       {border.name.replace(/\s\(([^()][^()]*)\)/g, "")}
                     </button>
