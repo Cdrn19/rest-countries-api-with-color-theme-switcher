@@ -19,14 +19,12 @@ const Header = () => {
         <h1>Where in the world?</h1>
       </a>
       <button className="header__button" onClick={handleClick}>
-        <div>
-          <img
-            className="header__button-"
-            src={theme === "light" ? moonDark : moonLight}
-            alt={"mode " + theme}
-          />
-          <p>Dark Mode</p>
-        </div>
+        <img
+          className="header__button--image"
+          src={theme === "light" ? moonDark : moonLight}
+          alt={"mode " + theme}
+        />
+        Dark Mode
       </button>
     </header>
   );

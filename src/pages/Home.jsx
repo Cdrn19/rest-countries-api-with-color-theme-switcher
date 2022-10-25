@@ -8,9 +8,9 @@ const Home = () => {
   const response = useGetCountries(API);
 
   return (
-    <>
+    <main>
       <Search countriesList={response} />
-    </>
+    </main>
   );
 };
 

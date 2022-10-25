@@ -21,7 +21,10 @@
 }
 
 .filter__list--button {
-    all: unset;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
     color: var(--text);
     cursor: pointer;
 }

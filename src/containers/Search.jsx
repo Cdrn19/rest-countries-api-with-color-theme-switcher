@@ -42,13 +42,13 @@ const search = ({ countriesList }) => {
 
   return (
     <>
-      <div className="search">
-        <section className="search__container">
+      <div className="search" role="search">
+        <div className="search__container">
           <div className="search__bar">
             <object
+              title="icon"
               data={searchIcon}
               type="image/svg+xml"
-              aria-label="search icon"
             ></object>
             <input
               className="search__input"
@@ -58,21 +58,17 @@ const search = ({ countriesList }) => {
               value={q}
             />
           </div>
-        </section>
-        <section className="filter__container">
+        </div>
+        <div className="filter__container">
           <div
             className={toggle ? "filter__button animation" : "filter__button"}
           >
             <button onClick={handleToggle}>
-              {!region.length ? (
-                <p>Filter&nbsp;by&nbsp;Region</p>
-              ) : (
-                <p>{region}</p>
-              )}
+              {!region.length ? `Filter by Region` : `${region}`}
               <object
+                title="icon"
                 data={downIcon}
                 type="image/svg+xml"
-                aria-label="down icon"
               ></object>
             </button>
           </div>
@@ -84,7 +80,7 @@ const search = ({ countriesList }) => {
               }}
             />
           )}
-        </section>
+        </div>
       </div>
       <CountriesList countriesList={useGetSearch([q, region], countriesList)} />
     </>

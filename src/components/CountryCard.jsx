@@ -7,7 +7,7 @@ const countryCard = ({ country }) => {
         <img src={country.flags.svg} alt={"flag's " + country.name} />
       </div>
       <div className="countryCard__info">
-        <h1 className="countryCard__info--title">{country.name}</h1>
+        <h2 className="countryCard__info--title">{country.name}</h2>
         <p className="countryCard__info--population">
           <span>Population:&nbsp;</span>
           {Intl.NumberFormat().format(country.population)}

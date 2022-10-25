@@ -2,40 +2,31 @@
     padding: 7.6rem 7.9rem 2.1rem;
 }
 
-.countrySelect__back--container {
-    button {
-        all: unset;
-        cursor: pointer;
-        padding: 1.2rem 3.8rem;
-        background-color: var(--bg-header);
-        color: var(--text);
-        border-radius: 0.5rem;
-        box-shadow: 0 0 1.8rem -1.3rem var(--shadow);
-    }
-}
-
-.countrySelect__back--button {  
-    div {
-        p {
-            all: unset;
-            display: inline-block;
-            margin-left: 0.5rem;
-            font-weight: 600;
-            font-size: 1.5rem;
-        }
-    }
-}
-
 .countrySelect__content--button {
-    all: unset;
+    text-decoration: none;
+}
+
+.countrySelect__back--button {
     display: flex;
     align-items: center;
+    background-color: var(--bg-header);
+    font-family: inherit;
+    color: var(--text);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.8rem -1.3rem var(--shadow);
+    padding: 1.2rem 3.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;  
 }
 
-.countrySelect__content--button {
+.countrySelect__back--button {
     object {
+        margin-right: 0.5rem;
         filter: var(--filter);
-    }  
+    }
 }
 
 .countrySelect__container {

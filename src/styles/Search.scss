@@ -27,16 +27,24 @@
 
 .search__bar {
     input {
-        all: unset;
+        background: transparent;
+        border: none;
         width: 100%;
         font-family: inherit;
         font-size: 1.5rem;
         margin: 0 2.5rem;
         font-weight: 300;
+        outline: none;
     }
 
     input::placeholder, input {
         color: $--dark-gray;
+        font-family: inherit;
+
+    }
+
+    input:active {
+        border: none;
     }
 }
 
@@ -49,27 +57,20 @@
 }
 
 .filter__button {
-    all: unset;
-}
-
-.filter__button {
     button {
-        all: unset;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
         transition: background-color 1s;
-        cursor: pointer;
-    }
-
-    button p {
-        width: 100%;
-        margin-right: 2.5rem;
         font-family: inherit;
         font-size: 1.5rem;
         font-weight: 300;
         color: var(--text);
+        border: none;
+        background: transparent;
+        cursor: pointer;
     }
     
     button object {

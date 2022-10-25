@@ -4,7 +4,7 @@ import "@styles/CountriesList.scss";
 
 const countriesList = ({ countriesList }) => {
   return (
-    <section className="countries__container">
+    <div className="countries__container">
       <div className="contries__list">
         {countriesList?.map((country, i) => (
           <Link key={i} to={"/country/" + encodeURIComponent(country.name)}>
@@ -12,7 +12,7 @@ const countriesList = ({ countriesList }) => {
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
