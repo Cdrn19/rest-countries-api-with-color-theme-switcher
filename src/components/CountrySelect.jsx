@@ -72,13 +72,13 @@ const countrySelect = () => {
                 </p>
                 <p>
                   <span>Currencies:&nbsp;</span>
-                  {Country[0]?.currencies.map((currency, i) =>
+                  {Country[0]?.currencies?.map((currency, i) =>
                     i === 0 ? currency.name : ", " + currency.name
                   )}
                 </p>
                 <p>
                   <span>Languages:&nbsp;</span>
-                  {Country[0]?.languages.map((language, i) =>
+                  {Country[0]?.languages?.map((language, i) =>
                     i === 0 ? language.name : ", " + language.name
                   )}
                 </p>
