@@ -1,26 +1,25 @@
-/* mode light */ 
+/* mode light */
 $--dark-gray: hsl(0, 0%, 52%);
 $--very-light-gray: hsl(0, 0%, 98%);
-$--white: hsl(0, 0%, 100%); 
+$--white: hsl(0, 0%, 100%);
 
 /* mode dark */
 $--dark-blue: hsl(209, 23%, 22%);
-$--very-dark-blue: hsl(207, 26%, 17%); 
+$--very-dark-blue: hsl(207, 26%, 17%);
 $--very-light-blue: hsl(200, 15%, 8%);
 
-
-
 [data-theme="light"] {
-    --shadow: hsl(0, 0%, 52%);
-    --bg-header: hsl(0, 0%, 98%);
-    --background: hsl(0, 0%, 100%);
-    --text: hsl(200, 15%, 8%)
+  --shadow: hsl(0, 0%, 52%);
+  --bg-header: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
 }
 
 [data-theme="dark"] {
-    --shadow: hsl(200, 15%, 8%);
-    --bg-header: hsl(209, 23%, 22%);
-    --background: hsl(207, 26%, 17%);
-    --text: hsl(0, 0%, 100%);
-    --filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(226deg) brightness(108%) contrast(101%);
+  --shadow: hsl(200, 15%, 8%);
+  --bg-header: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+  --filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(226deg)
+    brightness(108%) contrast(101%);
 }

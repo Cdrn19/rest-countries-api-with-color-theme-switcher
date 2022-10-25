@@ -73,8 +73,8 @@ Which modifies the `body` tag to set the CSS properties:
 ```css
 [data-theme="light"] {
     --shadow: hsl(0, 0%, 52%);
-    --bg-header: hsl(0, 0%, 98%);
-    --background: hsl(0, 0%, 100%);
+    --bg-header: hsl(0, 0%, 100%);
+    --background: hsl(0, 0%, 98%);
     --text: hsl(200, 15%, 8%)
 }
 
