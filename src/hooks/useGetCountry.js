@@ -12,7 +12,7 @@ const useGetCountry = (APIname, APIalpha) => {
       let code = "";
 
       try {
-        response = await fetch(`${APIname}/${name}`);
+        response = await fetch(`${APIname}/${name}?fullText=true`);
         response = await response.json();
         setCountry(response);
         if (response[0]?.borders !== undefined && response.length > 0) {
