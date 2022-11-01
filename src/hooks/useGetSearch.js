@@ -48,7 +48,8 @@ const useGetSearch = ([q, region], countriesList) => {
 
     setCountrySearch(getCountry());
   }, [
-    !!countries.length && (region.toString().length & q.toString().length) === 0
+    !!countries.length &&
+    (region.toString().length && q.toString().length) === 0
       ? q.toString()
       : filter,
     q.toString(),
